@@ -43,7 +43,11 @@
                 case 'inserir-contatos':
                             include("paginas/contatos/inserir-contatos.php");
                             break;
-                
+                            
+                case 'editar-contato':
+                    include("paginas/contatos/editar-contato.php");
+                    break;
+
                 case 'tarefas':
                     include("paginas/tarefas/tarefas.php");
                     break;

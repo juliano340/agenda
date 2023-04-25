@@ -24,12 +24,38 @@
                 <th>Telefone</th>
                 <th>Sexo</th>
                 <th>Data de Nascimento</th>
+                <th>Edição</th>
             </tr>
         </thead>
         <tbody>
             <?php 
-                $sql = "SELECT id_contato, upper(nome) as nome, lower(email) as email,telefone,sexo, date_format(data_nasc,'%d/%m/%Y') as data_nasc FROM CONTATOS";
-                $rs = mysqli_query($conexao,$sql);
+
+                $newsql = "SELECT id_contato, upper(nome) as nome,
+                    lower(email) as email,
+                    telefone,
+                    CASE
+                        WHEN sexo='F' THEN 'FEMININO'
+                        WHEN sexo='M' THEN 'MASCULINO'
+                    ELSE
+                        'NÃO ESPECIFICADO'
+                    END AS sexo,
+                    date_format(data_nasc,'%d/%m/%Y') as data_nasc
+                    
+                    FROM contatos"
+                    ;
+                  
+
+
+                
+                
+                
+
+
+                $sql = "SELECT id_contato, upper(nome) as nome, 
+                lower(email) as email,telefone,sexo,
+                date_format(data_nasc,'%d/%m/%Y') as data_nasc FROM CONTATOS";
+                
+                $rs = mysqli_query($conexao,$newsql);
                 while($dados = mysqli_fetch_assoc($rs)) {
 
                 
@@ -42,6 +68,9 @@
                 <th><?=$dados["telefone"] ?></th>
                 <th><?=$dados["sexo"] ?></th>
                 <th><?=$dados["data_nasc"] ?></th>
+                <th>
+                    <a href="index.php?menuop=editar-contato&id=<?=$dados["id_contato"]?>"> Editar </a>
+                </th>
             </tr>
             <?php 
                 }
