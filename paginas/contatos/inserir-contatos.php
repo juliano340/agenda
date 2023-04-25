@@ -16,5 +16,7 @@
     mysqli_query($conexao,$sql);
 
     echo "Registro inserido com sucesso!";
+    echo '<br><br><a href="index.php?menuop=contatos">Voltar</a>';
+
 
 ?>

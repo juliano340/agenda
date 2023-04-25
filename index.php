@@ -48,6 +48,10 @@
                     include("paginas/contatos/editar-contato.php");
                     break;
 
+                    case 'atualizar-contato':
+                        include("paginas/contatos/atualizar-contato.php");
+                        break;
+
                 case 'tarefas':
                     include("paginas/tarefas/tarefas.php");
                     break;
