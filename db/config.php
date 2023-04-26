@@ -1,6 +1,7 @@
 <?php
 
 $tipo_conexao = $_SERVER['HTTP_HOST'];
+
 if($tipo_conexao = 'juliano340.com') {
 
     define("SERVIDOR", "sql569.main-hosting.eu");
