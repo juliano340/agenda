@@ -91,5 +91,43 @@
         </tbody>
     </table>
 
+    <?php 
+
+        $sql_total = 'SELECT id_contato FROM contatos';
+        $qrTotal = mysqli_query($conexao,$sql_total) or die('ERRO');
+        $numTotal = mysqli_num_rows($qrTotal);
+        $totalPagina = ceil($numTotal/$quantidade);
+        
+
+        echo '<a href="?menuop=contatos&pagina=1">Primeira página</a>';
+
+        if($pagina>6) {
+            ?>
+                <a href="?menuop=contatos&pagina=<?php echo $pagina-1?>"> << </a>
+            <?php
+        }
+
+        for ($i=1;$i<=$totalPagina;$i++) {
+            if($i == $pagina) {
+                echo $i;
+            } else {
+                echo "<a href=\"?menuop=contatos&pagina=$i\">$i</a> ";
+               }
+        }
+
+        if($pagina<($totalPagina-5)) {
+            ?>
+                <a href="?menuop=contatos&pagina=<?php echo $pagina+1?>"> >> </a>
+            <?php
+        }
+
+        echo "<a href=\"?menuop=contatos&pagina=$totalPagina\">Última página</a>";
+
+        echo '<br> Total de registros: ' . $numTotal;
+
+
+    
+    ?>
+
 </body>
 </html>
