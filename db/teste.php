@@ -1,5 +1,6 @@
 <?php 
 
-echo $_SERVER['REMOTE_ADDR'];
+$tipo_conexao = $_SERVER['HTTP_HOST'];
+echo $tipo_conexao;
 
 ?>
