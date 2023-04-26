@@ -15,6 +15,14 @@
         <br>
         <br>
     </div>
+
+    <div>
+        <form action="index.php?menuop=contatos" method="post">
+            <input type="text" name="txt_pesquisa" value="">
+            <input type="submit" value="Pesquisar">
+            
+        </form>
+    </div>
     <table border="1">
         <thead>
             <tr>
@@ -30,6 +38,8 @@
         </thead>
         <tbody>
             <?php 
+            
+                $txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]: "";
 
                 $newsql = "SELECT id_contato, upper(nome) as nome,
                     lower(email) as email,
@@ -42,24 +52,16 @@
                     END AS sexo,
                     date_format(data_nasc,'%d/%m/%Y') as data_nasc
                     
-                    FROM contatos"
-                    ;
-                  
-
-
-                
-                
+                    FROM contatos
+                    WHERE id_contato = '{$txt_pesquisa}' or nome LIKE '%{$txt_pesquisa}%'
+                    ORDER BY nome asc;
+                    ";
                 
 
-
-                $sql = "SELECT id_contato, upper(nome) as nome, 
-                lower(email) as email,telefone,sexo,
-                date_format(data_nasc,'%d/%m/%Y') as data_nasc FROM CONTATOS";
                 
                 $rs = mysqli_query($conexao,$newsql);
                 while($dados = mysqli_fetch_assoc($rs)) {
-
-                
+               
             
             ?>
             <tr>
