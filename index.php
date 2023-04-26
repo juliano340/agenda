@@ -4,7 +4,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -48,9 +47,13 @@
                     include("paginas/contatos/editar-contato.php");
                     break;
 
-                    case 'atualizar-contato':
-                        include("paginas/contatos/atualizar-contato.php");
-                        break;
+                case 'atualizar-contato':
+                    include("paginas/contatos/atualizar-contato.php");
+                    break;
+
+                case 'excluir-contato':
+                    include("paginas/contatos/excluir-contato.php");
+                    break;
 
                 case 'tarefas':
                     include("paginas/tarefas/tarefas.php");

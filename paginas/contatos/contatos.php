@@ -25,6 +25,7 @@
                 <th>Sexo</th>
                 <th>Data de Nascimento</th>
                 <th>Edição</th>
+                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
@@ -70,6 +71,9 @@
                 <th><?=$dados["data_nasc"] ?></th>
                 <th>
                     <a href="index.php?menuop=editar-contato&id=<?=$dados["id_contato"]?>"> Editar </a>
+                </th>
+                <th>
+                    <a href="index.php?menuop=excluir-contato&id=<?=$dados["id_contato"]?>"> Excluir </a>
                 </th>
             </tr>
             <?php 
