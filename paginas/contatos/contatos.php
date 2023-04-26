@@ -38,6 +38,13 @@
         </thead>
         <tbody>
             <?php 
+
+                $quantidade = 10;
+
+                $pagina = (isset($_GET["pagina"]))?(int)$_GET['pagina']:1;
+
+                $inicio = ($quantidade * $pagina) - $quantidade;
+
             
                 $txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]: "";
 
@@ -54,15 +61,13 @@
                     
                     FROM contatos
                     WHERE id_contato = '{$txt_pesquisa}' or nome LIKE '%{$txt_pesquisa}%'
-                    ORDER BY nome asc;
+                    ORDER BY nome asc
+                    LIMIT $inicio, $quantidade
                     ";
-                
-
-                
+                                
                 $rs = mysqli_query($conexao,$newsql);
                 while($dados = mysqli_fetch_assoc($rs)) {
-               
-            
+                           
             ?>
             <tr>
                 <th><?=$dados["id_contato"] ?></th>
