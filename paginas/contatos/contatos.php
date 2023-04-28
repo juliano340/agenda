@@ -99,7 +99,7 @@
         $totalPagina = ceil($numTotal/$quantidade);
         
 
-        echo '<a href="?menuop=contatos&pagina=1">Primeira página</a>';
+        echo '<a href="?menuop=contatos&pagina=1">Primeira página  </a>';
 
         if($pagina>6) {
             ?>
@@ -121,7 +121,7 @@
             <?php
         }
 
-        echo "<a href=\"?menuop=contatos&pagina=$totalPagina\">Última página</a>";
+        echo "<a href=\"?menuop=contatos&pagina=$totalPagina\">  Última página</a>";
 
         echo '<br> Total de registros: ' . $numTotal;
 
