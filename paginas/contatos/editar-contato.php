@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
     $id = $_GET['id'];
     echo $id;
@@ -8,9 +8,7 @@
     $dados = mysqli_fetch_assoc($rs);
     
 
-
-
-?>
+?> -->
 
 
 <header>
