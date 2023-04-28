@@ -24,7 +24,8 @@
                 <a href="index.php?menuop=home" class="navbar-brand">
                     <h4>Sistema Agendador</h4>
                 </a>
-                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                
+                <div class="flex-row navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="index.php?menuop=home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?menuop=contatos">Contato</a></li>
