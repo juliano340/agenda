@@ -23,11 +23,11 @@
             
         </form>
     </div>
-    <table border="1" class="table table-dark table-hover table-bordered">
+    <table border="1" class="table table-dark table-hover table-bordered table-sm">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nome</th>
+                <th class="text-nowrap">Nome</th>
                 <th>E-Mail</th>
                 <th>Telefone</th>
                 <th>Sexo</th>
