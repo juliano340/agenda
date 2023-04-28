@@ -5,31 +5,31 @@
 <div>
     <form action="index.php?menuop=inserir-contatos" method="post">
         <div>
-            <label for="nomeContato">Nome</label>
-            <input type="text" name="nomeContato">
+            <label class="form-label" for="nomeContato">Nome</label>
+            <input class="form-control" type="text" name="nomeContato">
         </div>
 
         <div>
-            <label for="emailContato">E-mail</label>
-            <input type="email" name="emailContato">
+            <label class="form-label" for="emailContato">E-mail</label>
+            <input class="form-control" type="email" name="emailContato">
         </div>
 
         <div>
-            <label for="telefoneContato">Telefone</label>
-            <input type="text" name="telefoneContato">
+            <label class="form-label" for="telefoneContato">Telefone</label>
+            <input class="form-control" type="text" name="telefoneContato">
         </div>
 
         <div>
-            <label for="sexoContato">Sexo</label>
-            <input type="text" name="sexoContato">
+            <label class="form-label" for="sexoContato">Sexo</label>
+            <input class="form-control" type="select" name="sexoContato">
         </div>
 
         <div>
-            <label for="dataNascContato">Data de nascimento</label>
-            <input type="date" name="dataNascContato">
+            <label class="form-label" for="dataNascContato">Data de nascimento</label>
+            <input class="form-control mb-3" type="date" name="dataNascContato">
         </div>
         <div>
-            <input type="submit" value="Adicionar" name="btnAdicionar">
+            <input class="btn btn-success tb-"type="submit" value="Adicionar" name="btnAdicionar">
         </div>
     </form>
 </div>

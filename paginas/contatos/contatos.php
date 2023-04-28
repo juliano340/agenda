@@ -11,15 +11,15 @@
         <h3><i class="bi bi-person-badge"></i>Contatos</h3>
     </header>
     <div>
-        <a class="btn btn-outline-secondary btn-sm " href="index.php?menuop=cad-contatos"><i class="bi bi-person-fill-add"></i> Novo contato</a>
+        <a class="btn btn-secondary btn-sm " href="index.php?menuop=cad-contatos"><i class="bi bi-person-fill-add"></i> Novo contato</a>
         <br>
         <br>
     </div>
 
-    <div>
+    <div class="mb-2">
         <form action="index.php?menuop=contatos" method="post">
             <input type="text" name="txt_pesquisa" value="">
-            <button class="btn btn-outline-success btn-sm mb-2" type="submit"><i class="bi bi-search"> Pesquisar </i></button>
+            <button class="btn btn-success btn-sm mb-1" type="submit"><i class="bi bi-search"> Pesquisar </i></button>
             
         </form>
     </div>
@@ -81,7 +81,7 @@
                     <a class="btn btn-outline-warning btn-sm" href="index.php?menuop=editar-contato&id=<?=$dados["id_contato"]?>"><i class="bi bi-pencil-square"></i> </a>
                 </th>
                 <th>
-                <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=excluir-contato&id=<?=$dados["id_contato"]?>"> <i class="bi bi-trash"></i> </a>
+                <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=excluir-contato&id=<?=$dados["id_contato"]?>" onclick="confirmaExc();"> <i class="bi bi-trash"></i> </a>
                 </th>
             </tr>
             <?php 
@@ -124,7 +124,10 @@
             <?php
         }
 
-        echo "<li class='page-item'> <a class='page-link' href=\"?menuop=contatos&pagina=$totalPagina\">  Última página</a></ul>";
+        echo "
+        
+        
+        <li class='page-item'> <a class='page-link' href=\"?menuop=contatos&pagina=$totalPagina\">  Última página</a></ul>";
 
         
 
@@ -133,5 +136,19 @@
     ?>
     </ul>
 
+<script>
+    function confirmaExc() {
+        var retorno = confirm('Deseja realmente excluir?');
+            if(retorno == true) {
+
+            }
+            else {
+                
+            }
+        }
+        
+    
+</script>
+    
 </body>
 </html>

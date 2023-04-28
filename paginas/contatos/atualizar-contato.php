@@ -19,10 +19,9 @@
             data_nasc = '{$dataNascContato}'
             where id_contato = {$idContato}";
 
-    echo $sql . '<br>';
-
+    
     mysqli_query($conexao,$sql);
 
     echo "Registro atualizado com sucesso!";
-    echo '<br><a href="index.php?menuop=contatos">Voltar</a>';
+    echo '<br><br><a class="btn btn-secondary" href="index.php?menuop=contatos">Voltar</a>';
 ?>
