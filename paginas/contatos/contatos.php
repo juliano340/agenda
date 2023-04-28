@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <h3>Contatos</h3>
+        <h3><i class="bi bi-person-badge"></i>Contatos</h3>
     </header>
     <div>
-        <a class="btn btn-info btn-sm" href="index.php?menuop=cad-contatos">Novo contato</a>
+        <a class="btn btn-outline-secondary btn-sm " href="index.php?menuop=cad-contatos"><i class="bi bi-person-fill-add"></i> Novo contato</a>
         <br>
         <br>
     </div>
@@ -19,7 +19,7 @@
     <div>
         <form action="index.php?menuop=contatos" method="post">
             <input type="text" name="txt_pesquisa" value="">
-            <input type="submit" value="Pesquisar">
+            <button class="btn btn-outline-success btn-sm mb-2" type="submit"><i class="bi bi-search"> Pesquisar </i></button>
             
         </form>
     </div>
