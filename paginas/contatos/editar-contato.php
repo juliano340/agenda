@@ -1,14 +1,4 @@
-<!-- <?php
 
-    $id = $_GET['id'];
-    echo $id;
-    $sql = "SELECT * FROM CONTATOS WHERE id_contato={$id}";
-    echo $sql;
-    $rs = mysqli_query($conexao, $sql) or die("Erro");
-    $dados = mysqli_fetch_assoc($rs);
-    
-
-?> -->
 
 
 <header>
