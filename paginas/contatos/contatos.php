@@ -37,6 +37,7 @@
             </tr>
         </thead>
         <tbody>
+
             <?php 
 
                 $quantidade = 10;
@@ -91,6 +92,7 @@
         </tbody>
     </table>
 
+    <ul class="pagination">
     <?php 
 
         $sql_total = 'SELECT id_contato FROM contatos';
@@ -98,36 +100,38 @@
         $numTotal = mysqli_num_rows($qrTotal);
         $totalPagina = ceil($numTotal/$quantidade);
         
+        echo "<li class='page-item'><span class='page-link'> Total de registros: $numTotal </span></li>";
 
-        echo '<a href="?menuop=contatos&pagina=1">Primeira página  </a>';
+        echo '<li class="page-item"><a class="page-link" href="?menuop=contatos&pagina=1">Primeira página  </a></li>';
 
         if($pagina>6) {
             ?>
-                <a href="?menuop=contatos&pagina=<?php echo $pagina-1?>"> << </a>
+                <li class="page-item"><a class="page-link" href="?menuop=contatos&pagina=<?php echo $pagina-1?>"> << </a></li>
             <?php
         }
 
         for ($i=1;$i<=$totalPagina;$i++) {
             if($i == $pagina) {
-                echo $i;
+                echo "<li class='page-tem active'><span class='page-link'>$i</span></li>";
             } else {
-                echo "<a href=\"?menuop=contatos&pagina=$i\">$i</a> ";
+                echo "<li class='page-item'> <a class='page-link' href=\"?menuop=contatos&pagina=$i\">$i</a></li> ";
                }
         }
 
         if($pagina<($totalPagina-5)) {
             ?>
-                <a href="?menuop=contatos&pagina=<?php echo $pagina+1?>"> >> </a>
+                <li class="page-item"><a class='page-link' href="?menuop=contatos&pagina=<?php echo $pagina+1?>"> >> </a></li>
             <?php
         }
 
-        echo "<a href=\"?menuop=contatos&pagina=$totalPagina\">  Última página</a>";
+        echo "<li class='page-item'> <a class='page-link' href=\"?menuop=contatos&pagina=$totalPagina\">  Última página</a></ul>";
 
-        echo '<br> Total de registros: ' . $numTotal;
+        
 
 
     
     ?>
+    </ul>
 
 </body>
 </html>
