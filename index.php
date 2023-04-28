@@ -18,10 +18,10 @@
 <body>
     <header class="bg-dark">
         <div class="container">
-            <h1>Sistema agendador 1.0</h1>
+            
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a href="#" class="navbar-brand">
-                    <h2>Agenda Logotipo</h2>
+                    <h2>Sistema agendador 1.0</h2>
                 </a>
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
