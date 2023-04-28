@@ -23,7 +23,7 @@
             
         </form>
     </div>
-    <table border="1">
+    <table border="1" class="table table-dark">
         <thead>
             <tr>
                 <th>ID</th>
