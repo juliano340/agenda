@@ -20,8 +20,8 @@
         <div class="container">
             
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a href="#" class="navbar-brand">
-                    <h2>Sistema agendador 1.0</h2>
+                <a href="index.php?menuop=home" class="navbar-brand">
+                    <h4>Sistema Agendador</h4>
                 </a>
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
@@ -94,7 +94,7 @@
     </main>
 
     <footer class="container-fluid fixed-bottom bg-dark">
-        <div class="text-center">SIS AGENDADOR v1.0 - juliano340.com</div>
+        <div class="text-center">SIS AGENDADOR v1.0</div>
     </footer>
     
 </body>
