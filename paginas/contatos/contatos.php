@@ -81,7 +81,8 @@
                     <a class="btn btn-outline-warning btn-sm" href="index.php?menuop=editar-contato&id=<?=$dados["id_contato"]?>"><i class="bi bi-pencil-square"></i> </a>
                 </th>
                 <th>
-                <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=excluir-contato&id=<?=$dados["id_contato"]?>" onclick="confirmaExc();"> <i class="bi bi-trash"></i> </a>
+                <!-- <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=excluir-contato&id=<?=$dados["id_contato"]?>" onclick="confirmaExc();"> <i class="bi bi-trash"></i> </a> -->
+                <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=confirma-exclusao&id=<?=$dados["id_contato"]?>" onclick="confirmaExc();"> <i class="bi bi-trash"></i> </a>
                 </th>
             </tr>
             <?php 
@@ -136,19 +137,6 @@
     ?>
     </ul>
 
-<script>
-    function confirmaExc() {
-        var retorno = confirm('Deseja realmente excluir?');
-            if(retorno == true) {
-
-            }
-            else {
-                
-            }
-        }
-        
-    
-</script>
     
 </body>
 </html>

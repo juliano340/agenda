@@ -78,6 +78,11 @@
                 case 'excluir-contato':
                     include("paginas/contatos/excluir-contato.php");
                     break;
+                    
+                    case 'confirma-exclusao':
+                        include("paginas/contatos/confirma.php");
+                        break;
+                    
 
                 case 'tarefas':
                     include("paginas/tarefas/tarefas.php");
