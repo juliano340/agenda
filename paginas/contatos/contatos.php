@@ -11,7 +11,7 @@
         <h3>Contatos</h3>
     </header>
     <div>
-        <a href="index.php?menuop=cad-contatos">Novo contato</a>
+        <a class="btn btn-info btn-sm" href="index.php?menuop=cad-contatos">Novo contato</a>
         <br>
         <br>
     </div>
@@ -78,10 +78,10 @@
                 <th><?=$dados["sexo"] ?></th>
                 <th><?=$dados["data_nasc"] ?></th>
                 <th>
-                    <a href="index.php?menuop=editar-contato&id=<?=$dados["id_contato"]?>"> Editar </a>
+                    <a class="btn btn-outline-warning btn-sm" href="index.php?menuop=editar-contato&id=<?=$dados["id_contato"]?>"><i class="bi bi-pencil-square"></i> </a>
                 </th>
                 <th>
-                    <a href="index.php?menuop=excluir-contato&id=<?=$dados["id_contato"]?>"> Excluir </a>
+                <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=excluir-contato&id=<?=$dados["id_contato"]?>"> <i class="bi bi-trash"></i> </a>
                 </th>
             </tr>
             <?php 
